@@ -1,8 +1,6 @@
 import logging
 
-from concurrent.futures import process
 import cv2
-from PIL import Image as im
 import numpy as np
 import threading
 

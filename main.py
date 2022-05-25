@@ -1,3 +1,4 @@
+from common import store_images
 from consumer import Consumer
 from producer import Producer
 from source import Source
@@ -13,3 +14,5 @@ if __name__ == '__main__':
     consumer.start()
     producer.join()
     consumer.join()
+
+    store_images()
