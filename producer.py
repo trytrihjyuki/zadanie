@@ -1,12 +1,12 @@
 import logging
 import threading
+import time
 
 from common import mutex, queue_A
 from source import Source
 
 logging.basicConfig(level=logging.NOTSET, format='[%(threadName)s] %(message)s')
 logger = logging.getLogger()
-
 
 
 class Producer(threading.Thread):
@@ -34,3 +34,5 @@ class Producer(threading.Thread):
             queue_A.put(frame)
             logger.info(f'Put {i}. frame into A queue.')
             mutex.release()
+
+            time.sleep(self._production_wait)
