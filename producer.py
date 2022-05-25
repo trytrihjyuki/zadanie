@@ -16,7 +16,7 @@ class Producer(threading.Thread):
 
         Args:
             source: Source object to produce frames
-            n_items: number of frames produced
+            n_frames: number of frames produced
             production_wait: delay after each production
         """
         super().__init__()
