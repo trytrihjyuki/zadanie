@@ -4,7 +4,7 @@ from producer import Producer
 from source import Source
 
 N_FRAMES = 100
-PRODUCTION_DELAY = 0.001
+PRODUCTION_DELAY = 0.05
 
 if __name__ == '__main__':
     source = Source((768, 1024, 3))
